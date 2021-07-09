@@ -1,25 +1,30 @@
 <?php
-$name = $_POST['name'];
-$visitor_email = $_POST['email'];
-$subject = $_POST['subject'];
-$message = $_POST['message'];
+if(isset($_POST['submit'])){
+	$name = $_POST['name'];
+	$visitor_email = $_POST['email'];
+	$subject = $_POST['subject'];
+	$message = $_POST['message'];
 
-$email_from = 'info@sankalpteam.tech';
+	$email_from = 'info@sankalpteam.tech';
 
-$email_subject = 'New Form Submission';
+	$to = "vcetsankalp@gmail.com";
 
-$email_body = "User Name: $name.\n".
+	$email_subject = 'New Form Submission';
+
+	$headers = "MIME-Version: 1.0\r\n"
+    			."Content-type:text/plain; charset=UTF-8\r\n"
+				."Content-Transfer-Encoding: 8bit\r\n"
+     			. 'From: '.$email_from.'<'.$email_from.'>' . "\r\n".'Reply-To: '.$email_from."\r\n" 
+				. 'X-Mailer: PHP/' . phpversion();
+
+	$email_body = "User Name: $name.\n".
 			  "User Email: $visitor_email.\n".
 			  "Subject: $subject.\n".
 			  "Message: $message.\n";
+	
+	mail($to, $email_subject, $email_body,$headers);
 
-$to = "vcetsankalp@gmail.com";
+	header("Location: contact.html");
+}
 
-$headers = "From: $email_from \r\n";
-
-$headers .= "Replay-To $visitor_email \r\n";
-
-mail($to, $email_subject, $email_body,$headers);
-
-header("Location: contact.html");
-?>
+?> 
