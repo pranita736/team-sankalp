@@ -1,5 +1,5 @@
 <?php
-if($_POST['submit']){
+if(isset($_POST['submit'])){
 	$name = $_POST['name'];
 	$visitor_email = $_POST['email'];
 	$subject = $_POST['subject'];
@@ -12,10 +12,7 @@ if($_POST['submit']){
 	$email_subject = 'New Form Submission';
 
 	$headers = "MIME-Version: 1.0\r\n"
-    			."Content-type:text/plain; charset=UTF-8\r\n"
-				."Content-Transfer-Encoding: 8bit\r\n"
-     			. 'From: '.$email_from.'<'.$email_from.'>' . "\r\n".'Reply-To: '.$email_from."\r\n" 
-				. 'X-Mailer: PHP/' . phpversion();
+    			."Content-type:text/plain; charset=UTF-8\r\n";
 
 	$email_body = "User Name: $name.\n".
 			  "User Email: $visitor_email.\n".
