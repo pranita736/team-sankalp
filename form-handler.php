@@ -6,7 +6,7 @@
 
 	$email_from = 'info@sankalpteam.tech';
 
-	$to = "vcetsankalp@gmail.com";
+	$to = "admin@sankalpteam.tech";
 
 	$email_subject = 'New Form Submission';
 
