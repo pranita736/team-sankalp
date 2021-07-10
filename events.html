@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Team Sankalp</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/sankalp_logo.jpg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,200;1,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1200px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .image_carousel {
+            padding-top: 100px;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Team_Sankalp_logo.png" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="faq.html">FAQ</a> </li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Events We Conduct </h1>
+    </section>
+    <section class="image_carousel">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/technophilia-banner.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/aptitude_banner.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/daily-hustle-banner.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/speak-to-lead-banner.png" style="width:100%">
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </section>
+
+    <!------- blog page content -------->
+    <section class="blog-content">
+
+        <div class="row">
+            <div class="blog-left">
+                <img src="images/aptitude-image.jpg">
+                <h2>Aptitude Solving</h2>
+                <p>
+                    Aptitude solving is a basic skill required for the career opportunities.
+                    We conduct aptitude tests and answering sessions to work on
+                    the aptitude solving skills. Here we discuss different approaches towards the answer.
+                </p>
+            </div>
+
+            <div class="blog-right">
+                <img src="images/daily-hustle-image.png">
+                <h2>Daily Hustle</h2>
+                <p>
+                    It is a session started to motivate students work daily
+                    inorder to achieve their short-term and the long-term goals.
+                    We've a daily standup culture, which will be followed in the
+                    corporate world.
+                </p>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="blog-left">
+                <img src="images/speak-to-lead-image.png">
+                <h2>Speak To Lead</h2>
+                <p>
+                    Public speaking is a very essential skill nowadays.
+                    In order to improve our public speaking skills we conduct
+                    Speak To Lead sessions. This provides a platform for the members of the team
+                    to bring out their ideas and improve their skills.
+                </p>
+            </div>
+            <div class="blog-right">
+                <img src="images/technophilia-image.png">
+                <h2>Technophilia</h2>
+                <p>
+                    We're in the era of technology, being an engineering student
+                    we should have some knowledge about coding, and problem solving.
+                    We share the resources for learning coding, internships available, and
+                    motivate them to start working in groups.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up fa-lg"></i></button>
+    <!----Footer----->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Let's learn together.
+            Let's grow together.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p> Made with <i class="fa fa-heart"> by Supra</i></p>
+    </section>
+
+    <!----------JavaScript for Toggle Menu------->
+    <script src="script.js">   </script>
+
+</body>
+</html>
