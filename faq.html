@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>FAQ | Team Sankalp</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/sankalp_logo.jpg" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,200;1,300;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .collapsible {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 18px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: rgb(167 164 164);
+            }
+
+            .collapsible:after { 
+                content: '\2304'; 
+                color: white; 
+                font-weight: bold;
+                float: right; 
+                margin-left: 5px;
+            }
+
+        .active:after {
+            content: "\2303";
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f2f2f2;
+        }
+        .content p{
+            font-size: 18px;
+            padding: 15px;
+            color: #424040 ;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="images/Team_Sankalp_logo.png" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Frquently Asked Questions</h1>
+    </section>
+    <section class="faq">
+        <button class="collapsible" onclick="collapse()">1. Where are you working?</button>
+        <div class="content">
+            <p>We have a workspace in slack platform. There we discuss the things.</p>
+        </div>
+        <button class="collapsible">2. Is this platform open for everyone?</button>
+        <div class="content">
+            <p>
+                No, this platform is open for the students and staff of
+                Vivekananda College of Engineering and Technology, Puttur.
+            </p>
+        </div>
+        <button class="collapsible">3. Any prerequisites for joining the team</button>
+        <div class="content">
+            <p>
+                No prerequisites are there
+                you should have some interest  to work together.
+            </p>
+        </div>
+        <button class="collapsible">4. How to join Team Sankalp?</button>
+        <div class="content">
+            <p>
+                You should send a request mail to <a href="mailto:vcetsankalp@gmail.com">vcetsankalp@gmail.com</a> or contact administrative team
+            </p>
+        </div>
+        <button class="collapsible">5. What are the things required in request mail?</button>
+        <div class="content">
+            <p>
+                The request mail should contain your basic data such as full name, department, and batch.
+            </p>
+        </div>
+    </section>
+    <!---Scroll to top--->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up fa-2x"></i></button>
+    <!----Footer----->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>
+            Let's learn together.
+            Let's grow together.
+        </p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p> Made with <i class="fa fa-heart"></i> by Supra</p>
+    </section>
+
+    <script>
+        //get button by id
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+        //Navigation bar handling
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        //faq collapse menu
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+             
+    </script>
+
+</body>
+</html>
