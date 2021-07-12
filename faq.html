@@ -21,17 +21,17 @@
             font-size: 18px;
         }
 
-            .active, .collapsible:hover {
-                background-color: rgb(167 164 164);
-            }
+        .active, .collapsible:hover {
+           background-color: rgb(167 164 164);
+        }
 
-            .collapsible:after { 
-                content: '\2304'; 
-                color: white; 
-                font-weight: bold;
-                float: right; 
-                margin-left: 5px;
-            }
+        .collapsible:after {
+            content: '\2304'; 
+            color: white; 
+            font-weight: bold;
+            float: right; 
+            margin-left: 5px;
+        }
 
         .active:after {
             content: "\2303";
@@ -49,6 +49,11 @@
             padding: 15px;
             color: #424040 ;
             text-align: center;
+        }
+        @media (max-width: 700px){
+            .sub-header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 
